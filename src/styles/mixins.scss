@@ -1,0 +1,198 @@
+@use "./variables";
+
+$font-weight-bold: 700;
+$font-weight-semibold: 600;
+$paragraph-color: variables.$black-color;
+$heading-color: variables.$black-color;
+$text-color: variables.$black-color;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-center-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+// Heading
+@mixin h1($fontWeight: 700, $color: variables.$black-color) {
+  font-size: 48px;
+  line-height: 68px;
+  font-weight: $fontWeight;
+  color: $color;
+}
+
+@mixin h2($fontWeight: 700, $color: variables.$black-color) {
+  font-size: 36px;
+  line-height: 52px;
+  font-weight: $fontWeight;
+  color: $color;
+
+  @media (max-width: 768px) {
+    font-size: 36px;
+    line-height: 48px;
+  }
+}
+
+@mixin h3($fontWeight: 700, $color: variables.$black-color) {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: $fontWeight;
+  color: $color;
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+@mixin h4($fontWeight: 700, $color: variables.$black-color) {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: $fontWeight;
+  color: $color;
+}
+
+@mixin h5($fontWeight: 700, $color: variables.$black-color) {
+  font-size: 22px;
+  line-height: 24px;
+  font-weight: $fontWeight;
+  color: $color;
+}
+
+@mixin h6($fontWeight: 700, $color: variables.$black-color) {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: $fontWeight;
+  color: $color;
+}
+
+// Box Shadow
+@mixin box-shadow-1 {
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.12);
+}
+
+@mixin box-shadow-2 {
+  box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.08);
+}
+
+@mixin box-shadow-3 {
+  box-shadow: 0px 20px 24px rgba(0, 0, 0, 0.08);
+}
+
+@mixin box-shadow-4 {
+  box-shadow: 0px 28px 32px rgba(0, 0, 0, 0.06);
+}
+
+// Paragraph
+@mixin paragraph-20($color: variables.$black-color) {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  color: $color;
+}
+
+@mixin paragraph-18($color: variables.$black-color) {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  color: $color;
+}
+@mixin paragraph-16($color: variables.$black-color) {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: $color;
+}
+
+@mixin paragraph-14($color: variables.$black-color) {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: $color;
+}
+
+// Text
+@mixin text-20-regular($color: variables.$black-color) {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+  color: $color;
+}
+
+@mixin text-18-regular($color: variables.$black-color) {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  color: $color;
+}
+@mixin text-16-regular($color: variables.$black-color) {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: $color;
+}
+@mixin text-14-regular($color: variables.$black-color) {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: $color;
+}
+
+@mixin text-20-semibold($color: variables.$black-color) {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 600;
+  color: $color;
+}
+
+@mixin text-18-semibold($color: variables.$black-color) {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 600;
+  color: $color;
+}
+@mixin text-16-semibold($color: variables.$black-color) {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+
+  color: $color;
+}
+@mixin text-14-semibold($color: variables.$black-color) {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 600;
+  color: $color;
+}
+
+@mixin text-20-bold($color: variables.$black-color) {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 700;
+  color: $color;
+}
+
+@mixin text-18-bold($color: variables.$black-color) {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 700;
+  color: $color;
+}
+@mixin text-16-bold($color: variables.$black-color) {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+
+  color: $color;
+}
+@mixin text-14-bold($color: variables.$black-color) {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  color: $color;
+}
