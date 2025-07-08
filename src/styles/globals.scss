@@ -1,0 +1,152 @@
+@use "../styles/variables";
+@use "../styles/mixins";
+
+
+.flex-center {
+  @include mixins.flex-center;
+}
+
+.flex-center-col {
+  @include mixins.flex-center-col;
+}
+
+// H1
+.h1-primary { @include mixins.h1(700, variables.$primary-color); }
+.h1-secondary { @include mixins.h1(700, variables.$secondary-color); }
+.h1-success { @include mixins.h1(700, variables.$success-color); }
+.h1-info { @include mixins.h1(700, variables.$info-color); }
+.h1-warning { @include mixins.h1(700, variables.$warning-color); }
+.h1-danger { @include mixins.h1(700, variables.$danger-color); }
+.h1-black { @include mixins.h1(700, variables.$black-color); }
+.h1-gray { @include mixins.h1(700, variables.$gray-color); }
+.h1-gray-light { @include mixins.h1(700, variables.$gray-light-color); }
+.h1-white { @include mixins.h1(700, variables.$white-color); }
+
+// H2
+.h2-primary { @include mixins.h2(700, variables.$primary-color); }
+.h2-secondary { @include mixins.h2(700, variables.$secondary-color); }
+.h2-success { @include mixins.h2(700, variables.$success-color); }
+.h2-info { @include mixins.h2(700, variables.$info-color); }
+.h2-warning { @include mixins.h2(700, variables.$warning-color); }
+.h2-danger { @include mixins.h2(700, variables.$danger-color); }
+.h2-black { @include mixins.h2(700, variables.$black-color); }
+.h2-gray { @include mixins.h2(700, variables.$gray-color); }
+.h2-gray-light { @include mixins.h2(700, variables.$gray-light-color); }
+.h2-white { @include mixins.h2(700, variables.$white-color); }
+
+// H3
+.h3-primary { @include mixins.h3(700, variables.$primary-color); }
+.h3-secondary { @include mixins.h3(700, variables.$secondary-color); }
+.h3-success { @include mixins.h3(700, variables.$success-color); }
+.h3-info { @include mixins.h3(700, variables.$info-color); }
+.h3-warning { @include mixins.h3(700, variables.$warning-color); }
+.h3-danger { @include mixins.h3(700, variables.$danger-color); }
+.h3-black { @include mixins.h3(700, variables.$black-color); }
+.h3-gray { @include mixins.h3(700, variables.$gray-color); }
+.h3-gray-light { @include mixins.h3(700, variables.$gray-light-color); }
+.h3-white { @include mixins.h3(700, variables.$white-color); }
+
+// H4
+.h4-primary { @include mixins.h4(700, variables.$primary-color); }
+.h4-secondary { @include mixins.h4(700, variables.$secondary-color); }
+.h4-success { @include mixins.h4(700, variables.$success-color); }
+.h4-info { @include mixins.h4(700, variables.$info-color); }
+.h4-warning { @include mixins.h4(700, variables.$warning-color); }
+.h4-danger { @include mixins.h4(700, variables.$danger-color); }
+.h4-black { @include mixins.h4(700, variables.$black-color); }
+.h4-gray { @include mixins.h4(700, variables.$gray-color); }
+.h4-gray-light { @include mixins.h4(700, variables.$gray-light-color); }
+.h4-white { @include mixins.h4(700, variables.$white-color); }
+
+// H5
+.h5-primary { @include mixins.h5(700, variables.$primary-color); }
+.h5-secondary { @include mixins.h5(700, variables.$secondary-color); }
+.h5-success { @include mixins.h5(700, variables.$success-color); }
+.h5-info { @include mixins.h5(700, variables.$info-color); }
+.h5-warning { @include mixins.h5(700, variables.$warning-color); }
+.h5-danger { @include mixins.h5(700, variables.$danger-color); }
+.h5-black { @include mixins.h5(700, variables.$black-color); }
+.h5-gray { @include mixins.h5(700, variables.$gray-color); }
+.h5-gray-light { @include mixins.h5(700, variables.$gray-light-color); }
+.h5-white { @include mixins.h5(700, variables.$white-color); }
+
+// H6
+.h6-primary { @include mixins.h6(700, variables.$primary-color); }
+.h6-secondary { @include mixins.h6(700, variables.$secondary-color); }
+.h6-success { @include mixins.h6(700, variables.$success-color); }
+.h6-info { @include mixins.h6(700, variables.$info-color); }
+.h6-warning { @include mixins.h6(700, variables.$warning-color); }
+.h6-danger { @include mixins.h6(700, variables.$danger-color); }
+.h6-black { @include mixins.h6(700, variables.$black-color); }
+.h6-gray { @include mixins.h6(700, variables.$gray-color); }
+.h6-gray-light { @include mixins.h6(700, variables.$gray-light-color); }
+.h6-white { @include mixins.h6(700, variables.$white-color); }
+
+// Paragraph
+.paragraph-20-primary { @include mixins.paragraph-20(variables.$primary-color); }
+.paragraph-20-secondary { @include mixins.paragraph-20(variables.$secondary-color); }
+.paragraph-20-success { @include mixins.paragraph-20(variables.$success-color); }
+.paragraph-20-info { @include mixins.paragraph-20(variables.$info-color); }
+.paragraph-20-warning { @include mixins.paragraph-20(variables.$warning-color); }
+.paragraph-20-danger { @include mixins.paragraph-20(variables.$danger-color); }
+.paragraph-20-black { @include mixins.paragraph-20(variables.$black-color); }
+.paragraph-20-gray { @include mixins.paragraph-20(variables.$gray-color); }
+.paragraph-20-gray-light { @include mixins.paragraph-20(variables.$gray-light-color); }
+.paragraph-20-white { @include mixins.paragraph-20(variables.$white-color); }
+
+.paragraph-18-primary { @include mixins.paragraph-18(variables.$primary-color); }
+.paragraph-18-secondary { @include mixins.paragraph-18(variables.$secondary-color); }
+.paragraph-18-success { @include mixins.paragraph-18(variables.$success-color); }
+.paragraph-18-info { @include mixins.paragraph-18(variables.$info-color); }
+.paragraph-18-warning { @include mixins.paragraph-18(variables.$warning-color); }
+.paragraph-18-danger { @include mixins.paragraph-18(variables.$danger-color); }
+.paragraph-18-black { @include mixins.paragraph-18(variables.$black-color); }
+.paragraph-18-gray { @include mixins.paragraph-18(variables.$gray-color); }
+.paragraph-18-gray-light { @include mixins.paragraph-18(variables.$gray-light-color); }
+.paragraph-18-white { @include mixins.paragraph-18(variables.$white-color); }
+
+.paragraph-16-primary { @include mixins.paragraph-16(variables.$primary-color); }
+.paragraph-16-secondary { @include mixins.paragraph-16(variables.$secondary-color); }
+.paragraph-16-success { @include mixins.paragraph-16(variables.$success-color); }
+.paragraph-16-info { @include mixins.paragraph-16(variables.$info-color); }
+.paragraph-16-warning { @include mixins.paragraph-16(variables.$warning-color); }
+.paragraph-16-danger { @include mixins.paragraph-16(variables.$danger-color); }
+.paragraph-16-black { @include mixins.paragraph-16(variables.$black-color); }
+.paragraph-16-gray { @include mixins.paragraph-16(variables.$gray-color); }
+.paragraph-16-gray-light { @include mixins.paragraph-16(variables.$gray-light-color); }
+.paragraph-16-white { @include mixins.paragraph-16(variables.$white-color); }
+
+.paragraph-14-primary { @include mixins.paragraph-14(variables.$primary-color); }
+.paragraph-14-secondary { @include mixins.paragraph-14(variables.$secondary-color); }
+.paragraph-14-success { @include mixins.paragraph-14(variables.$success-color); }
+.paragraph-14-info { @include mixins.paragraph-14(variables.$info-color); }
+.paragraph-14-warning { @include mixins.paragraph-14(variables.$warning-color); }
+.paragraph-14-danger { @include mixins.paragraph-14(variables.$danger-color); }
+.paragraph-14-black { @include mixins.paragraph-14(variables.$black-color); }
+.paragraph-14-gray { @include mixins.paragraph-14(variables.$gray-color); }
+.paragraph-14-gray-light { @include mixins.paragraph-14(variables.$gray-light-color); }
+.paragraph-14-white { @include mixins.paragraph-14(variables.$white-color); }
+
+// Text - Regular
+.text-20-regular { @include mixins.text-20-regular; }
+.text-18-regular { @include mixins.text-18-regular; }
+.text-16-regular { @include mixins.text-16-regular; }
+.text-14-regular { @include mixins.text-14-regular; }
+
+// Text - Semibold
+.text-20-semibold { @include mixins.text-20-semibold; }
+.text-18-semibold { @include mixins.text-18-semibold; }
+.text-16-semibold { @include mixins.text-16-semibold; }
+.text-14-semibold { @include mixins.text-14-semibold; }
+
+// Text - Bold
+.text-20-bold { @include mixins.text-20-bold; }
+.text-18-bold { @include mixins.text-18-bold; }
+.text-16-bold { @include mixins.text-16-bold; }
+.text-14-bold { @include mixins.text-14-bold; }
+
+// Box Shadows
+.box-shadow-1 { @include mixins.box-shadow-1; }
+.box-shadow-2 { @include mixins.box-shadow-2; }
+.box-shadow-3 { @include mixins.box-shadow-3; }
+.box-shadow-4 { @include mixins.box-shadow-4; }

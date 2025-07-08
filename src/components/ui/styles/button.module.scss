@@ -1,0 +1,80 @@
+@use "../../../styles/variables";
+
+.button {
+  border-radius: 6px !important;
+  padding: 10px 20px !important;
+  &:hover {
+    box-shadow: none !important;
+  }
+
+  // Size variants
+  &.small {
+    padding: 6px 12px !important;
+    font-size: 12px !important;
+    height: 32px !important;
+    min-width: 64px !important;
+  }
+
+  &.large {
+    padding: 10px 20px !important;
+    font-size: 16px !important;
+    height: 42px !important;
+    min-width: 96px !important;
+  }
+
+  // Color variants
+  &.primary {
+    background-color: #1565d8 !important;
+    color: white !important;
+
+    &:hover {
+      opacity: 0.6 !important;
+    }
+  }
+
+  &.secondary {
+    background-color: #3f598a !important;
+    color: white !important;
+
+    &:hover {
+      opacity: 0.6 !important;
+    }
+  }
+
+  &.success {
+    background-color: #36b37e !important;
+    color: white !important;
+
+    &:hover {
+      opacity: 0.6 !important;
+    }
+  }
+
+  &.danger {
+    background-color: #e95432 !important;
+    color: white !important;
+
+    &:hover {
+      opacity: 0.6 !important;
+    }
+  }
+
+  &.disabled {
+    background-color: #b3bac5 !important;
+    color: #9e9e9e !important;
+    cursor: not-allowed !important;
+  }
+
+  &.outline {
+    background-color: #fff !important;
+    color: variables.$primary-color !important;
+    border: 1px solid variables.$primary-color;
+    &:hover {
+      opacity: 0.6 !important;
+    }
+  }
+
+  @media (max-width: (variables.$breakpoint-sm - 0.02)) {
+    font-size: 10px !important;
+  }
+}
