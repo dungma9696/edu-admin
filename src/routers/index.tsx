@@ -3,11 +3,29 @@ import { FC } from "react";
 import type { RouteObject } from "react-router";
 import { useRoutes } from "react-router-dom";
 import { AsyncDev, AsyncHome } from "./element";
+import AdminLayout from "@/layouts/admin";
+import Dashboard from "@/pages/admin/dashboard";
+import MainLayout from "@/layouts/main";
 
 const routeList: RouteObject[] = [
   {
-    path: PATH_PUBLIC.HOME,
-    element: <AsyncHome />,
+    element: <MainLayout />,
+    children: [
+      {
+        path: PATH_PUBLIC.HOME,
+        element: <AsyncHome />,
+      },
+    ],
+  },
+  {
+    path: PATH_PUBLIC.ADMIN,
+    element: <AdminLayout />,
+    children: [
+      {
+        path: "dashboard",
+        element: <Dashboard />,
+      },
+    ],
   },
   {
     path: PATH_PUBLIC.DEV,
