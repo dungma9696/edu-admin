@@ -1,0 +1,126 @@
+@use "../../../../styles//variables";
+
+.container {
+  background-color: #f8fbff;
+  padding: 50px 0;
+
+  .analyticRight {
+    .tag {
+      color: variables.$success-color;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    h2 {
+      margin-top: 20px;
+      margin-bottom: 30px;
+      width: 555px;
+    }
+
+    p {
+      margin-bottom: 30px;
+    }
+
+    .cardContainer {
+      .analyticIconWrap {
+        position: relative;
+        width: 64px;
+        height: 64px;
+
+        .analyticIcon {
+          background-color: variables.$primary-color;
+          width: 64px;
+          height: 64px;
+          border-radius: 16px;
+          opacity: 6%;
+        }
+
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 1;
+        }
+      }
+      h6 {
+        margin-top: 40px;
+      }
+      p {
+        width: 263px;
+        margin-top: 20px;
+      }
+    }
+    .btnLink {
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+
+  @media (min-width: (variables.$breakpoint-md)) and (max-width: (variables.$breakpoint-lg - 0.02)) {
+    .analyticImage {
+      width: 100%;
+    }
+
+    .analyticRight {
+      padding: 0 50px;
+
+      h2 {
+        font-size: 32px;
+        width: 100%;
+      }
+
+      p {
+        width: 100%;
+      }
+    }
+  }
+
+  @media (min-width: (variables.$breakpoint-lg + 1)) and (max-width: (variables.$breakpoint-xl - 0.02)) {
+    .analyticImage {
+      width: 600px;
+    }
+  }
+
+  @media (max-width: (variables.$breakpoint-sm - 0.02)) {
+    .analyticImage {
+      width: 100%;
+      object-fit: auto;
+      height: auto;
+    }
+    .analyticRight {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .tag {
+        text-align: center;
+      }
+
+      h2 {
+        font-size: 28px;
+        width: 100%;
+        text-align: center;
+      }
+
+      p {
+        font-size: 16px;
+        text-align: center;
+      }
+
+      .cardContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        .analyticIconWrap {
+          position: relative;
+          width: 64px;
+          height: 64px;
+        }
+      }
+
+      .btnLink {
+        margin-top: 20px;
+      }
+    }
+  }
+}

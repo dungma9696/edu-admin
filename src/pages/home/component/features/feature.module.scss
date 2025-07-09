@@ -1,0 +1,105 @@
+@use "../../../../styles//variables";
+
+.container {
+  margin-bottom: 100px;
+  .titleWrap {
+    .badgeFeature {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    & > h2 {
+      margin-top: 20px;
+    }
+    & > p {
+      margin-top: 20px;
+      width: 692px;
+      text-align: center;
+    }
+  }
+
+  .cardContainer {
+    .cardIconWrap {
+      position: relative;
+      .cardIcon {
+        background-color: variables.$primary-color;
+        width: 64px;
+        height: 64px;
+        border-radius: 16px;
+        opacity: 6%;
+      }
+
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    h6 {
+      margin-top: 40px;
+    }
+    p {
+      width: 263px;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .featureLink {
+      margin-top: 20px;
+      color: variables.$primary-color;
+    }
+  }
+
+  // Tablet
+  @media (min-width: (variables.$breakpoint-md)) and (max-width: (variables.$breakpoint-lg - 0.02)) {
+    .titleWrap {
+      & > h2 {
+        font-size: 32px;
+      }
+      & > p {
+        font-size: 18px;
+      }
+    }
+
+    .cardContainer {
+      p {
+        width: 100%;
+        height: 80px;
+      }
+
+      .featureLink {
+        margin-top: 20px;
+        color: variables.$primary-color;
+      }
+    }
+  }
+
+  // > Desktop
+  @media (min-width: (variables.$breakpoint-lg + 1)) {
+  }
+
+  //  Mobile
+  @media (max-width: (variables.$breakpoint-md - 0.02)) {
+  margin-bottom: 50px;
+
+    .cardContainer {
+      margin-top: 50px;
+      p {
+        width: 100%;
+        text-align: center;
+      }
+    }
+    .titleWrap {
+      & > h2 {
+        font-size: 28px;
+        text-align: center;
+      }
+      & > p {
+        font-size: 16px;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,92 @@
+@use "../../../styles//variables";
+
+.container {
+  padding: 100px 0;
+  .footerSlogan {
+    width: 263px;
+    margin: 20px 0;
+  }
+  .socialMedia {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .socialButton {
+    background-color: #f8f9fa;
+    color: #6c757d;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #e9ecef;
+      color: #495057;
+      transform: translateY(-2px);
+    }
+
+    .MuiSvgIcon-root {
+      font-size: 16px;
+    }
+  }
+  .linkList {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 20px;
+  }
+
+  .footerLink {
+    transition: color 0.3s ease;
+    margin: 5px 0;
+    &:hover {
+      color: #333;
+      text-decoration: none;
+    }
+  }
+
+  .footerCopyRight {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+    align-items: center;
+    .favoriteButton {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background-color: variables.$primary-color;
+      color: white;
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (min-width: (variables.$breakpoint-md)) and (max-width: (variables.$breakpoint-lg - 0.02)) {
+  }
+
+  @media (min-width: (variables.$breakpoint-sm)) and (max-width: (variables.$breakpoint-md - 0.02)) {
+    padding: 50px 0;
+
+    .footerSlogan {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: (variables.$breakpoint-lg)) and (max-width: (variables.$breakpoint-xl - 0.02)) {
+  }
+
+  @media (max-width: (variables.$breakpoint-sm - 0.02)) {
+    padding: 50px 0;
+    .footerLogo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      .footerSlogan {
+        text-align: center;
+      }
+    }
+  }
+}

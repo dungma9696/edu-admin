@@ -1,0 +1,215 @@
+@use "../../../../styles//variables";
+
+.container {
+  background-color: #f9fcff;
+  padding: 150px 0;
+
+  .titleWrap {
+    h2 {
+      margin: 30px 0;
+      width: 450px;
+      text-align: center;
+    }
+
+    p {
+      display: flex;
+    }
+    .startBtn {
+      color: variables.$primary-color;
+      margin-left: 5px;
+    }
+  }
+
+  .pricing {
+    margin-top: 50px;
+  }
+
+  .standard {
+    border-top: 3px solid #3f598a;
+  }
+
+  .essentials {
+    border-top: 3px solid #36b37e;
+  }
+
+  .premium {
+    border-top: 3px solid #1565d8;
+  }
+  .pricingCard {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    .cardDescription {
+      height: 80px;
+    }
+    .priceList {
+      height: 200px;
+    }
+    .price {
+      font-size: 40px;
+      font-weight: 700;
+      span {
+        font-size: 16px;
+        font-weight: 400;
+        color: variables.$gray-color;
+      }
+    }
+
+    .title {
+      font-size: 24px;
+      font-weight: 700;
+      color: variables.$black-color;
+      margin-top: 20px;
+      display: block;
+    }
+    p {
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+
+    .priceItem {
+      display: flex;
+      align-items: center;
+      margin: 20px 0;
+      p {
+        margin: 0;
+      }
+    }
+
+    .iconCheck {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      margin-right: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #bfefe0;
+      color: variables.$success-color;
+      svg {
+        font-size: 16px;
+      }
+    }
+
+    .btn {
+      margin-top: 30px;
+      width: 100%;
+    }
+  }
+
+  @media (min-width: (variables.$breakpoint-md)) and (max-width: (variables.$breakpoint-lg - 0.02)) {
+    padding: 50px 0;
+
+    .pricingCard {
+      padding: 15px;
+
+      .price {
+        font-size: 30px;
+      }
+
+      .iconCheck {
+        width: 24px;
+        height: 24px;
+
+        svg {
+          font-size: 12px;
+        }
+      }
+
+      .priceItem {
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: (variables.$breakpoint-sm)) and (max-width: (variables.$breakpoint-md - 0.02)) {
+    padding: 50px 0;
+    .titleWrap {
+      h2 {
+        font-size: 36px;
+      }
+
+      p {
+        font-size: 18px;
+        text-align: center;
+        display: inline-block;
+      }
+      .startBtn {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1;
+        white-space: nowrap;
+
+        svg {
+          vertical-align: middle;
+          margin-left: 4px;
+          position: relative;
+        }
+      }
+    }
+    .pricingCard {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      gap: 10px;
+      .cardTop {
+        flex: 0 0 40%;
+      }
+      .priceList {
+        flex: 0 0 50%;
+      }
+
+      .btn {
+        flex: 0 0 40%;
+        margin-top: 0;
+      }
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @media (min-width: (variables.$breakpoint-lg)) and (max-width: (variables.$breakpoint-xl - 0.02)) {
+    padding: 50px 0;
+  }
+
+  @media (max-width: (variables.$breakpoint-sm - 0.02)) {
+    padding: 50px 0;
+    .titleWrap {
+      h2 {
+        font-size: 28px;
+        width: 100%;
+      }
+
+      p {
+        font-size: 16px;
+        text-align: center;
+        display: inline-block;
+      }
+      .startBtn {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1;
+        white-space: nowrap;
+
+        svg {
+          vertical-align: middle;
+          margin-left: 4px;
+          position: relative;
+        }
+      }
+    }
+
+    .pricingCard {
+      .priceList {
+        height: auto;
+      }
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

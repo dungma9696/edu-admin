@@ -1,0 +1,122 @@
+@use "../../../../styles//variables";
+
+.container {
+  margin: 100px 0;
+  h2 {
+    text-align: center;
+  }
+  .logoContainer {
+    margin-top: 50px;
+    img {
+      width: 96px;
+      height: 32px;
+    }
+  }
+  .feedbackItemFirst {
+    border-right: 1px solid #e5e7eb;
+  }
+  .feedbackContainer {
+    margin-top: 50px;
+
+    .feedbackItem {
+      p {
+        width: 361px;
+        margin-top: 20px;
+      }
+
+      .customerInfo {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 30px;
+      }
+
+      .customerAvatar {
+        border: 2px solid #e5e7eb;
+      }
+
+      .customerDetails {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+      }
+
+      .customerName {
+        margin: 0;
+      }
+
+      .verifiedChip {
+        align-self: flex-start;
+
+        .MuiChip-label {
+          padding-left: 0.25rem;
+          font-size: 0.875rem;
+        }
+      }
+    }
+  }
+
+  @media (min-width: (variables.$breakpoint-md)) and (max-width: (variables.$breakpoint-lg - 0.02)) {
+    margin: 50px 0;
+  }
+
+  @media (min-width: (variables.$breakpoint-sm)) and (max-width: (variables.$breakpoint-md - 0.02)) {
+    margin: 0 0 50px 0;
+
+    h2 {
+      font-size: 24px;
+    }
+    .logoContainer {
+      display: flex;
+      justify-content: center;
+
+      .logoItem {
+        display: flex;
+        justify-content: center;
+      }
+    }
+    .feedbackContainer {
+      margin-top: 50px;
+
+      .feedbackItem {
+        p {
+          width: 90%;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: (variables.$breakpoint-sm - 0.02)) {
+    margin: 0 0 50px 0;
+    h2 {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    .feedbackContainer {
+      margin-top: 50px;
+
+      .feedbackItem {
+        p {
+          width: 100%;
+        }
+      }
+    }
+
+    .feedbackItemFirst {
+      border-right: none;
+      margin-bottom: 40px;
+    }
+    .logoContainer {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+
+      .logoItem {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}

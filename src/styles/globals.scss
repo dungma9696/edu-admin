@@ -2,6 +2,23 @@
 @use "../styles/mixins";
 
 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Arial;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
 .flex-center {
   @include mixins.flex-center;
 }
