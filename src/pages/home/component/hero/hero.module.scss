@@ -1,0 +1,167 @@
+@use "../../../../styles//variables";
+@use "../../../../styles//mixins";
+
+.container {
+  position: relative;
+  .hero {
+    background-color: variables.$primary-color;
+
+    display: flex;
+    padding: 100px 0 120px 0;
+    position: relative;
+    margin-bottom: 200px;
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      position: relative;
+      z-index: 2;
+
+      .subtitle {
+        line-height: 1.8;
+        margin: 30px 0;
+      }
+
+      .buttonGroup {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        margin-bottom: 80px;
+        flex-wrap: wrap;
+
+        .primaryButton {
+          background-color: white !important;
+          color: variables.$primary-color !important;
+          text-transform: none !important;
+          font-weight: 600 !important;
+          padding: 12px 36px !important;
+          border-radius: 8px !important;
+          font-size: 1rem !important;
+
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.9) !important;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+          }
+
+          .MuiSvgIcon-root {
+            font-size: 1rem;
+          }
+        }
+
+        .secondaryButton {
+          color: white !important;
+          border-color: white !important;
+          text-transform: none !important;
+          font-weight: 600 !important;
+          padding: 12px 32px !important;
+          border-radius: 8px !important;
+          font-size: 1rem !important;
+
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+          }
+
+          .MuiSvgIcon-root {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  .illustration {
+    position: absolute;
+    bottom: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    width: 100%;
+    max-width: 800px;
+
+    .illustrationImage {
+      width: 100% !important;
+      height: auto !important;
+      border-radius: 12px;
+    }
+  }
+
+  @media (min-width: (variables.$breakpoint-md + 1)) and (max-width: (variables.$breakpoint-lg - 0.02)) {
+     .hero {
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+      min-height: 900px;
+    }
+    .content {
+      .title {
+        font-size: 40px;
+      }
+      .subtitle {
+        width: 566px;
+      }
+    }
+  }
+
+  @media (min-width: (variables.$breakpoint-lg + 1)) {
+    .hero {
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+      min-height: 900px;
+    }
+    .content {
+      .subtitle {
+        width: 732px;
+      }
+    }
+  }
+
+  @media (max-width: (variables.$breakpoint-md - 0.02)) {
+    .hero {
+      padding: 50px 0;
+      min-height: 700px;
+
+    }
+    .content {
+      .title {
+        font-size: 32px;
+        line-height: 40px;
+        text-align: center;
+      }
+      .subtitle {
+        font-size: 16px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+// @media (max-width: 768px) {
+//   .hero { 
+//     .content {
+//       .buttonGroup {
+//         flex-direction: column;
+//         align-items: center;
+//         margin-bottom: 60px;
+
+//         .primaryButton,
+//         .secondaryButton {
+//           width: 100%;
+//           max-width: 280px;
+//         }
+//       }
+
+//       .illustration {
+//         bottom: -100px;
+//         max-width: 90%;
+
+//         .illustrationImage {
+//           border-radius: 8px;
+//         }
+//       }
+//     }
+//   }
+
+// }
