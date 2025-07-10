@@ -34,6 +34,7 @@ const INPUT_TYPES = {
   PHONE: "tel",
   NUMBER: "number",
   SELECT: "select",
+  DATE: "date",
 } as const;
 
 export type InputState = (typeof INPUT_STATES)[keyof typeof INPUT_STATES];
