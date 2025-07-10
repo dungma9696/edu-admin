@@ -4,7 +4,7 @@ import App from "./App.tsx";
 import "@/styles/globals.scss";
 import { SnackbarProvider } from "notistack";
 import { Provider } from "react-redux";
-import { store } from "./stores/index.ts";
+import store from "./stores/index.ts";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

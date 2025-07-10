@@ -11,7 +11,8 @@ export type ControlTypes =
   | "select"
   | "radio"
   | "date"
-  | "checkbox-group";
+  | "checkbox-group"
+  | "password";
 
 export interface Option {
   label: string;

@@ -55,6 +55,7 @@
 
 .ctaButton {
   border: 2px solid variables.$white-color;
+  background-color: transparent;
   text-transform: none;
   font-weight: bold;
   color: variables.$white-color;
@@ -62,6 +63,7 @@
   text-decoration: none;
   border-radius: 6px;
   transition: all 0.2s ease;
+  cursor: pointer;
 
   &:hover {
     background-color: variables.$white-color;
@@ -475,10 +477,11 @@
   border-radius: 6px;
   font-weight: 700;
   transition: background-color 0.2s ease;
+  border: none;
 
-  &:hover {
-    background-color: darken(variables.$primary-color, 10%);
-  }
+  // &:hover {
+  //   background-color: darken(variables.$primary-color, 10%);
+  // }
 }
 
 

@@ -1,9 +1,9 @@
-import { Tabs, Tab, Box, Container, Grid } from "@mui/material";
-import { useState } from "react";
 import Badge from "@/components/ui/badge";
 import Button from "@/components/ui/button";
 import Input from "@/components/ui/input";
 import { PhonelinkLockOutlined } from "@mui/icons-material";
+import { Box, Container, Grid, Tab, Tabs } from "@mui/material";
+import { useState } from "react";
 import "../../styles/globals.scss";
 import Form from "./components/form";
 import Table from "./components/table";
@@ -20,6 +20,8 @@ function DevComponent() {
   const [phone, setPhone] = useState("");
   const [age, setAge] = useState("");
   const [country, setCountry] = useState("");
+  const [hobbies, setHobbies] = useState<string[]>([]);
+  const [gender, setGender] = useState<string>("male");
 
   const options = [
     { value: "vn", label: "Việt Nam" },
@@ -40,6 +42,7 @@ function DevComponent() {
       {tabIndex === 0 && (
         <Box sx={{ mt: 3 }}>
           <h1 className="h1-primary">Button</h1>
+
           <Grid container spacing={2}>
             <Grid>
               <Button variant="primary">Primary</Button>
@@ -155,7 +158,7 @@ function DevComponent() {
                   label="Tên người dùng"
                   placeholder="Nhập tên của bạn"
                   value={username}
-                  onValueChange={(val) => setUsername(val)}
+                  onValueChange={(val) => setUsername(String(val))}
                   state="filled"
                 />
               </Grid>
@@ -165,9 +168,13 @@ function DevComponent() {
                   label="Email"
                   placeholder="Nhập email"
                   value={email}
-                  onValueChange={setEmail}
+                  onValueChange={(val) =>
+                    setEmail(typeof val === "string" ? val : "")
+                  }
                   helperText="Email không hợp lệ"
-                  validate={(val) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)}
+                  validate={(val) =>
+                    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(val))
+                  }
                 />
               </Grid>
               <Grid size={4}>
@@ -176,7 +183,7 @@ function DevComponent() {
                   label="Mật khẩu"
                   placeholder="Nhập mật khẩu"
                   value={password}
-                  onValueChange={(val) => setPassword(val)}
+                  onValueChange={(val) => setPassword(String(val))}
                 />
               </Grid>
               <Grid size={4}>
@@ -185,7 +192,7 @@ function DevComponent() {
                   label="Số điện thoại"
                   placeholder="0123 456 789"
                   value={phone}
-                  onValueChange={(val) => setPhone(val)}
+                  onValueChange={(val) => setPhone(String(val))}
                   leftIcon={<PhonelinkLockOutlined />}
                 />
               </Grid>
@@ -195,7 +202,7 @@ function DevComponent() {
                   label="Tuổi"
                   placeholder="Nhập tuổi"
                   value={age}
-                  onValueChange={(val) => setAge(val)}
+                  onValueChange={(val) => setAge(String(val))}
                 />
               </Grid>
               <Grid size={4}>
@@ -204,8 +211,34 @@ function DevComponent() {
                   label="Quốc gia"
                   placeholder="Chọn quốc gia"
                   value={country}
-                  onValueChange={(val) => setCountry(val)}
+                  onValueChange={(val) => setCountry(String(val))}
                   options={options}
+                />
+              </Grid>
+              <Grid size={4}>
+                <Input
+                  inputType="checkbox"
+                  label="Chọn sở thích"
+                  value={hobbies}
+                  options={[
+                    { value: "reading", label: "Reading" },
+                    { value: "sports", label: "Sports" },
+                    { value: "music", label: "Music" },
+                  ]}
+                  onValueChange={(vals) => setHobbies(vals as string[])}
+                />
+              </Grid>
+
+              <Grid size={4}>
+                <Input
+                  inputType="radio"
+                  label="Chọn giới tính"
+                  value={gender}
+                  options={[
+                    { value: "male", label: "Nam" },
+                    { value: "female", label: "Nữ" },
+                  ]}
+                  onValueChange={(val) => setGender(val as string)}
                 />
               </Grid>
             </Grid>

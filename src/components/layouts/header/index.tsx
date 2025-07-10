@@ -10,8 +10,9 @@ import {
 import type React from "react";
 import { useEffect, useState, useRef } from "react";
 import styles from "./header.module.scss";
-import { Container } from "@mui/material";
+import { Container, Dialog } from "@mui/material";
 import { Link } from "react-router";
+import Login from "@/components/modules/login-client";
 
 interface DropdownItem {
   label: string;
@@ -190,7 +191,10 @@ const Header: React.FC = () => {
   const [activeSubMenu, setActiveSubMenu] = useState<string | null>(null);
   const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const languageTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const [open, setOpen] = useState(false);
 
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   useEffect(() => {
     setHasMounted(true);
     const checkMobile = () => {
@@ -535,13 +539,15 @@ const Header: React.FC = () => {
           {renderMobileLanguageToggle()}
           <div className={styles.mobileDivider} />
           <div className={styles.mobileCtaItem}>
-            <Link
-              to="https://designspace.io/product/ehya-landing-page-design-template/"
+            <button
               className={styles.mobileCtaButton}
-              onClick={() => setMobileOpen(false)}
+              onClick={() => {
+                setMobileOpen(false);
+                handleOpen();
+              }}
             >
               Get it now
-            </Link>
+            </button>
           </div>
         </div>
       </div>
@@ -593,12 +599,9 @@ const Header: React.FC = () => {
                 ))}
                 {renderSubMenu()}
                 {renderLanguageToggle()}
-                <Link
-                  to="https://designspace.io/product/ehya-landing-page-design-template/"
-                  className={styles.ctaButton}
-                >
+                <button className={styles.ctaButton} onClick={handleOpen}>
                   Get it now
-                </Link>
+                </button>
               </nav>
             )}
 
@@ -617,6 +620,9 @@ const Header: React.FC = () => {
         </Container>
       </header>
       {/* Mobile Menu */}
+      <Dialog open={open} onClose={handleClose} maxWidth="xs" fullWidth>
+        <Login onClose={handleClose} />
+      </Dialog>
       {renderMobileMenu()}
     </>
   );
