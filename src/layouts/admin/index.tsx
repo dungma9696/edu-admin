@@ -39,6 +39,8 @@ import {
 import { Outlet } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { AppState } from "@/stores";
+import { logout } from "@/api/auth.api";
+import { enqueueSnackbar } from "@/utils/notistackUtils";
 
 interface NavigationItem {
   text: string;
@@ -92,9 +94,24 @@ export default function AdminLayout() {
     setSidebarCollapsed(!sidebarCollapsed);
   };
 
+  const handleLogout = async () => {
+    try {
+      await logout(true);
+
+      localStorage.clear();
+      window.location.href = "/admin/login";
+      enqueueSnackbar("Logout successfully", {
+        variant: "success",
+      });
+    } catch {
+      enqueueSnackbar("Login error", {
+        variant: "error",
+      });
+    }
+  };
+
   const drawer = (
     <Box sx={{ display: "flex", flexDirection: "column", height: "100%" }}>
-      {/* Header */}
       <Toolbar>
         {!sidebarCollapsed && (
           <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
@@ -268,7 +285,7 @@ export default function AdminLayout() {
           Settings
         </MenuItem>
         <Divider />
-        <MenuItem onClick={handleProfileMenuClose}>
+        <MenuItem onClick={handleLogout}>
           <Logout sx={{ width: 24, height: 24, mr: 2 }} />
           Logout
         </MenuItem>

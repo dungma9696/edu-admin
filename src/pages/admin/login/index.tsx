@@ -11,6 +11,8 @@ import { profileAction } from "@/features/profile/profile.store";
 import { LoginParams } from "@/interface/user/login";
 import { enqueueSnackbar } from "notistack";
 import { useAppDispatch } from "@/stores";
+import { getMessageError } from "@/utils/convert-data";
+import { IResponseError } from "@/interface";
 
 // Schema validation
 const loginSchema = yup.object({
@@ -54,8 +56,9 @@ function Login() {
       }
 
       navigate("/admin/dashboard");
-    } catch {
-      enqueueSnackbar("Login error", {
+    } catch (error) {
+      const textError = getMessageError(error as IResponseError);
+      enqueueSnackbar(textError, {
         variant: "error",
       });
     }
