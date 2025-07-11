@@ -1,6 +1,6 @@
 import Button from "@/components/ui/button";
 import CloseIcon from "@mui/icons-material/Close";
-import { Divider, IconButton } from "@mui/material";
+import { Checkbox, Divider, FormControlLabel, IconButton } from "@mui/material";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -28,8 +28,8 @@ type LoginProps = {
 function Login({ onClose }: LoginProps) {
   const {
     handleSubmit,
-    watch,
-    setValue,
+    register,
+
     formState: { errors },
   } = useForm<LoginFormInputs>({
     resolver: yupResolver(loginSchema),
@@ -40,8 +40,6 @@ function Login({ onClose }: LoginProps) {
   });
 
   const [isKeepLogin, setIsKeepLogin] = useState<boolean>(false);
-  const email = watch("email");
-  const password = watch("password");
 
   const onSubmit = (data: LoginFormInputs) => {
     console.log("Login Data:", data);
@@ -81,12 +79,7 @@ function Login({ onClose }: LoginProps) {
                 inputType="text"
                 label="Email"
                 placeholder="Enter your email"
-                value={email}
-                onValueChange={(val) =>
-                  setValue("email", val, {
-                    shouldValidate: true,
-                  })
-                }
+                {...register("email")}
                 helperText={errors.email?.message}
                 state={errors.email ? "error" : "filled"}
                 className={styles.input}
@@ -97,21 +90,22 @@ function Login({ onClose }: LoginProps) {
                 inputType="password"
                 label="Password"
                 placeholder="Enter your password"
-                value={password}
-                onValueChange={(val) =>
-                  setValue("password", val, { shouldValidate: true })
-                }
+                {...register("password")}
                 helperText={errors.password?.message}
                 state={errors.password ? "error" : "filled"}
                 className={styles.input}
               />
             </div>
             <div className={styles.forwardPass}>
-              <Input
-                inputType="checkbox"
-                value={isKeepLogin}
-                options={[{ value: true, label: "Keep me sign in" }]}
-                onValueChange={(vals) => setIsKeepLogin(vals)}
+              <FormControlLabel
+                control={
+                  <Checkbox
+                    checked={isKeepLogin}
+                    onChange={(e) => setIsKeepLogin(e.target.checked)}
+                    color="primary"
+                  />
+                }
+                label="Keep me signed in"
                 className={styles.keepLogin}
               />
               <Link to="">Forgot password?</Link>

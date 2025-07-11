@@ -13,10 +13,12 @@ import { enqueueSnackbar } from "notistack";
 import { useAppDispatch } from "@/stores";
 import { getMessageError } from "@/utils/convert-data";
 import { IResponseError } from "@/interface";
+import { MESSAGE_STATUS } from "@/constants/common.const";
+import { PATH_PUBLIC } from "@/constants/router.const";
 
 // Schema validation
 const loginSchema = yup.object({
-  email: yup.string().required("Username is required"),
+  email: yup.string().required("Email is required").email("Email is not valid"),
   password: yup
     .string()
     .required("Password is required")
@@ -26,10 +28,10 @@ const loginSchema = yup.object({
 function Login() {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
+
   const {
     handleSubmit,
-    watch,
-    setValue,
+    register,
     formState: { errors },
   } = useForm<LoginParams>({
     resolver: yupResolver(loginSchema),
@@ -39,9 +41,6 @@ function Login() {
     },
   });
 
-  const email = watch("email");
-  const password = watch("password");
-
   const onSubmit = async (data: LoginParams) => {
     try {
       const res = await login(data);
@@ -50,17 +49,14 @@ function Login() {
         localStorage.setItem("token", res.accessToken);
         localStorage.setItem("refreshToken", res.refreshToken);
 
-        enqueueSnackbar("Login successfully", {
+        enqueueSnackbar(MESSAGE_STATUS.LOGIN_SUCCESSFULLY, {
           variant: "success",
         });
+        navigate(`${PATH_PUBLIC.ADMIN}/dashboard`);
       }
-
-      navigate("/admin/dashboard");
     } catch (error) {
       const textError = getMessageError(error as IResponseError);
-      enqueueSnackbar(textError, {
-        variant: "error",
-      });
+      enqueueSnackbar(textError, { variant: "error" });
     }
   };
 
@@ -74,12 +70,7 @@ function Login() {
               inputType="text"
               label="Email"
               placeholder="Enter your email"
-              value={email}
-              onValueChange={(val) =>
-                setValue("email", Array.isArray(val) ? (val[0] ?? "") : val, {
-                  shouldValidate: true,
-                })
-              }
+              {...register("email")}
               helperText={errors.email?.message}
               state={errors.email ? "error" : "filled"}
             />
@@ -89,14 +80,7 @@ function Login() {
               inputType="password"
               label="Password"
               placeholder="Enter your password"
-              value={password}
-              onValueChange={(val) =>
-                setValue(
-                  "password",
-                  Array.isArray(val) ? (val[0] ?? "") : val,
-                  { shouldValidate: true },
-                )
-              }
+              {...register("password")}
               helperText={errors.password?.message}
               state={errors.password ? "error" : "filled"}
             />

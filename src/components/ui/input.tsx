@@ -59,9 +59,10 @@ export interface InputProps extends Omit<TextFieldProps, "variant" | "type"> {
   label?: string;
   helperText?: string;
   options?: SelectOption[];
-  onValueChange?: (value: any) => void;
   validate?: (value: string | string[]) => boolean;
   direction?: "row" | "column";
+  name?: string;
+  inputRef?: React.Ref<any>;
 }
 
 const parseBoolean = (val: any): any => {
@@ -82,9 +83,9 @@ const Input: FC<InputProps> = ({
   placeholder = "Text",
   disabled = false,
   className = "",
-  onValueChange,
+  // onValueChange,
   direction,
-  onChange,
+  // onChange,
   onFocus,
   onBlur,
   margin,
@@ -104,13 +105,13 @@ const Input: FC<InputProps> = ({
     return `${baseClass} ${stateClass} ${typeClass} ${className}`.trim();
   };
 
-  const handleChange = (
-    event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => {
-    const newValue = event.target.value;
-    onValueChange?.(newValue);
-    onChange?.(event);
-  };
+  // const handleChange = (
+  //   event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  // ) => {
+  //   const newValue = event.target.value;
+  //   // onValueChange?.(newValue);
+  //   onChange?.(event);
+  // };
 
   const handleBlur = (
     event: FocusEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -124,7 +125,7 @@ const Input: FC<InputProps> = ({
 
   const handleSelectChange = (event: any) => {
     const newValue = parseBoolean(event.target.value);
-    onValueChange?.(newValue);
+    // onValueChange?.(newValue);
     if (validate) {
       const isValid = validate(newValue);
       setInternalError(!isValid);
@@ -206,7 +207,7 @@ const Input: FC<InputProps> = ({
       }
 
       const parsedValues = updatedValues.map(parseBoolean);
-      onValueChange?.(parsedValues);
+      // onValueChange?.(parsedValues);
       if (validate) {
         setInternalError(!validate(parsedValues as any));
       }
@@ -249,7 +250,7 @@ const Input: FC<InputProps> = ({
   if (inputType === INPUT_TYPES.RADIO_GROUP) {
     const handleRadioChange = (event: ChangeEvent<HTMLInputElement>) => {
       const newValue = parseBoolean(event.target.value);
-      onValueChange?.(newValue);
+      // onValueChange?.(newValue);
       if (validate) {
         setInternalError(!validate(newValue));
       }
@@ -299,18 +300,18 @@ const Input: FC<InputProps> = ({
       )}
       <TextField
         type={currentType}
-        value={value}
         placeholder={placeholder}
         disabled={disabled}
         error={showError}
         focused={isFocused}
         className={getInputClass()}
-        onChange={handleChange}
         onFocus={onFocus}
         onBlur={handleBlur}
         margin={margin}
         size={size}
         fullWidth={fullWidth}
+        inputRef={props.inputRef}
+        name={props.name}
         InputProps={{
           startAdornment: leftIcon ? (
             <InputAdornment position="start">{leftIcon}</InputAdornment>
@@ -331,6 +332,7 @@ const Input: FC<InputProps> = ({
         }}
         {...props}
       />
+
       {showError && helperText && (
         <Typography className={`${styles.helperText} ${styles.error}`}>
           {helperText}

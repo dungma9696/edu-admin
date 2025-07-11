@@ -41,6 +41,10 @@ import { useSelector } from "react-redux";
 import { AppState } from "@/stores";
 import { logout } from "@/api/auth.api";
 import { enqueueSnackbar } from "@/utils/notistackUtils";
+import { MESSAGE_STATUS } from "@/constants/common.const";
+import { PATH_PUBLIC } from "@/constants/router.const";
+import { getMessageError } from "@/utils/convert-data";
+import { IResponseError } from "@/interface";
 
 interface NavigationItem {
   text: string;
@@ -99,14 +103,13 @@ export default function AdminLayout() {
       await logout(true);
 
       localStorage.clear();
-      window.location.href = "/admin/login";
-      enqueueSnackbar("Logout successfully", {
+      window.location.href = `${PATH_PUBLIC.ADMIN}/login`;
+      enqueueSnackbar(MESSAGE_STATUS.LOGOUT_SUCCESSFULLY, {
         variant: "success",
       });
-    } catch {
-      enqueueSnackbar("Login error", {
-        variant: "error",
-      });
+    } catch (error) {
+      const textError = getMessageError(error as IResponseError);
+      enqueueSnackbar(textError, { variant: "error" });
     }
   };
 
