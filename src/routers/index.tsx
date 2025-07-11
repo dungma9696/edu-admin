@@ -6,6 +6,7 @@ import { AsyncDev, AsyncHome } from "./element";
 import AdminLayout from "@/layouts/admin";
 import Dashboard from "@/pages/admin/dashboard";
 import MainLayout from "@/layouts/main";
+import Login from "@/pages/admin/login";
 
 const routeList: RouteObject[] = [
   {
@@ -26,6 +27,10 @@ const routeList: RouteObject[] = [
         element: <Dashboard />,
       },
     ],
+  },
+  {
+    path: `${PATH_PUBLIC.ADMIN}/login`,
+    element: <Login />,
   },
   {
     path: PATH_PUBLIC.DEV,

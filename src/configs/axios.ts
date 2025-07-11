@@ -1,16 +1,13 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import axios, { AxiosError, InternalAxiosRequestConfig } from "axios";
 // import { GetServerSidePropsContext } from 'next';
-import { config } from "./env";
 import { stringify } from "qs";
 import { STORAGE } from "@/constants/storage.const";
-
-const baseURL = config.VITE_API_BASE_URL;
-
-
+import { refreshAccessToken } from "@/api/auth.api";
+import { CONFIG } from "./env";
 
 export const request = axios.create({
-  baseURL,
+  baseURL: CONFIG.BASE_URL + CONFIG.BASE_URL_VERSION,
   headers: {
     "Content-Type": "application/json",
   },
@@ -51,7 +48,6 @@ request.interceptors.response.use(
       _retry?: boolean;
     };
 
-    // Nếu lỗi 401 và chưa thử refresh token
     if (error.response?.status === 401 && !originalRequest._retry) {
       if (isRefreshing) {
         return new Promise((resolve, reject) => {
@@ -88,15 +84,12 @@ request.interceptors.response.use(
   },
 );
 
-/**
- * API gọi để refresh token
- */
 const refreshToken = async (): Promise<string> => {
   const refreshToken = localStorage.getItem(STORAGE.REFRESH_TOKEN);
   if (!refreshToken) throw new Error("No refresh token available");
-  const param = `${baseURL}/client/auth/refresh-token?refreshToken=${refreshToken}`;
+  const newAccessToken = await refreshAccessToken(true);
 
-  const response = await axios.post(param);
+  const response = await axios.post(newAccessToken);
   return response.data.accessToken;
 };
 

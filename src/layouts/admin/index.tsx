@@ -37,8 +37,14 @@ import {
   MoreVert,
 } from "@mui/icons-material";
 import { Outlet } from "react-router-dom";
-
-
+import { useSelector } from "react-redux";
+import { AppState } from "@/stores";
+import { logout } from "@/api/auth.api";
+import { enqueueSnackbar } from "@/utils/notistackUtils";
+import { MESSAGE_STATUS } from "@/constants/common.const";
+import { PATH_PUBLIC } from "@/constants/router.const";
+import { getMessageError } from "@/utils/convert-data";
+import { IResponseError } from "@/interface";
 
 interface NavigationItem {
   text: string;
@@ -57,6 +63,8 @@ const navigationItems: NavigationItem[] = [
 ];
 
 export default function AdminLayout() {
+  const { profile } = useSelector((state: AppState) => state.profile);
+
   const [sidebarCollapsed, setSidebarCollapsed] = React.useState(false);
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -90,9 +98,23 @@ export default function AdminLayout() {
     setSidebarCollapsed(!sidebarCollapsed);
   };
 
+  const handleLogout = async () => {
+    try {
+      await logout(true);
+
+      localStorage.clear();
+      window.location.href = `${PATH_PUBLIC.ADMIN}/login`;
+      enqueueSnackbar(MESSAGE_STATUS.LOGOUT_SUCCESSFULLY, {
+        variant: "success",
+      });
+    } catch (error) {
+      const textError = getMessageError(error as IResponseError);
+      enqueueSnackbar(textError, { variant: "error" });
+    }
+  };
+
   const drawer = (
     <Box sx={{ display: "flex", flexDirection: "column", height: "100%" }}>
-      {/* Header */}
       <Toolbar>
         {!sidebarCollapsed && (
           <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
@@ -105,7 +127,6 @@ export default function AdminLayout() {
       </Toolbar>
       <Divider />
 
-      {/* Navigation Items */}
       <List sx={{ flexGrow: 1 }}>
         {navigationItems.map((item) => (
           <ListItem key={item.text} disablePadding>
@@ -186,7 +207,7 @@ export default function AdminLayout() {
           {!sidebarCollapsed && (
             <Box sx={{ flexGrow: 1 }}>
               <Typography variant="subtitle2" noWrap>
-                John Doe
+                {profile?.email}
               </Typography>
               <Typography variant="caption" color="text.secondary" noWrap>
                 Administrator
@@ -267,7 +288,7 @@ export default function AdminLayout() {
           Settings
         </MenuItem>
         <Divider />
-        <MenuItem onClick={handleProfileMenuClose}>
+        <MenuItem onClick={handleLogout}>
           <Logout sx={{ width: 24, height: 24, mr: 2 }} />
           Logout
         </MenuItem>

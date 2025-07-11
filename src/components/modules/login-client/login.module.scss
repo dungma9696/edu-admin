@@ -1,0 +1,172 @@
+@use "../../../styles/variables";
+.container {
+  display: flex;
+  align-items: center;
+  .formContainer {
+    width: 488px;
+    min-height: 500px;
+    border-radius: 12px;
+    background-color: #fff;
+    margin: 0 auto;
+    .iconWrap {
+      display: flex;
+      justify-content: flex-end;
+    }
+    .formWrap {
+      padding: 8px 58px 48px 58px;
+
+      h2 {
+        text-align: center;
+      }
+
+      .btnLoginGoogle {
+        width: 100%;
+        margin-top: 30px;
+        span {
+          color: #fff !important;
+        }
+      }
+      .googleIcon {
+        width: 42px;
+        height: 42px;
+        border-radius: 4px;
+        background-color: #fff;
+        margin-right: 20px;
+
+        img {
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      .loginText {
+        margin: 30px 0;
+        display: flex;
+        align-items: center;
+
+        p {
+          margin: 0 20px;
+        }
+      }
+
+      .form {
+        margin-top: 30px;
+
+        .inputWrap {
+          margin: 30px 0;
+        }
+
+        .btnLogin {
+          width: 100%;
+          padding: 19px 0 !important;
+          span {
+            color: #fff !important;
+          }
+        }
+
+        .forwardPass {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .keepLogin {
+            width: auto !important;
+            flex-shrink: 0;
+          }
+          a {
+            color: variables.$primary-color;
+            font-size: 14px;
+            font-weight: 600;
+            white-space: nowrap;
+            flex-shrink: 0;
+          }
+        }
+      }
+
+      .registerLink {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        a {
+          color: variables.$primary-color;
+          font-size: 14px;
+          font-weight: 700;
+          margin-left: 6px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: (variables.$breakpoint-md)) {
+    .formContainer {
+      .formWrap {
+        padding: 8px 18px 28px 18px;
+        h2 {
+          font-size: 24px;
+        }
+
+        .btnLoginGoogle {
+          margin-top: 16px;
+
+          span {
+            font-size: 14px;
+          }
+        }
+        .googleIcon {
+          width: 30px;
+          height: 30px;
+
+          img {
+            width: 18px;
+            height: 18px;
+          }
+        }
+
+        .loginText {
+          margin: 16px 0;
+          display: flex;
+          align-items: center;
+
+          p {
+            margin: 0 10px;
+          }
+        }
+
+        .form {
+          margin-top: 16px;
+
+          .inputWrap {
+            margin: 16px 0;
+          }
+          .input {
+            input {
+              height: 16px;
+            }
+          }
+
+          .btnLogin {
+            padding: 10px 0 !important;
+          }
+          .forwardPass {
+            .keepLogin {
+              span {
+                font-size: 12px;
+              }
+            }
+            a {
+              font-size: 12px;
+            }
+          }
+        }
+
+        .registerLink {
+          p {
+            font-size: 12px;
+          }
+          a {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

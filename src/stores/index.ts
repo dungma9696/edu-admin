@@ -1,11 +1,17 @@
-import { configureStore } from '@reduxjs/toolkit'
-import postReducer from "@/features/post/post.slice"
-export const store = configureStore({
-  reducer: {
-    post: postReducer,
-  
-  },
-})
+import { configureStore } from "@reduxjs/toolkit";
 
-export type RootState = ReturnType<typeof store.getState>
-export type AppDispatch = typeof store.dispatch
+import rootReducer from "./rootReducer";
+import { useDispatch } from "react-redux";
+
+const store = configureStore({
+  reducer: rootReducer,
+});
+
+export type AppState = ReturnType<typeof rootReducer>;
+export type AppDispatch = typeof store.dispatch;
+
+export default store;
+
+export type AppStore = typeof store;
+
+export const useAppDispatch = () => useDispatch<AppDispatch>();
