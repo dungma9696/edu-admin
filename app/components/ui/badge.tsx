@@ -1,5 +1,3 @@
-"use client";
-
 import type { FC, ReactNode, MouseEvent } from "react";
 import styles from "./styles/badge.module.scss";
 

@@ -1,5 +1,3 @@
-"use client";
-
 import { ArrowForward } from "@mui/icons-material";
 import { Box, Button, Container, Grid } from "@mui/material";
 import type React from "react";

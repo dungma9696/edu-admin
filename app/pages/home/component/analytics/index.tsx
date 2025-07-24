@@ -1,7 +1,7 @@
 import { Container, Grid } from "@mui/material";
 import styles from "./analytics.module.scss";
-import Button from "@/components/ui/button";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import Button from "@/components/ui/button";
 function Analytic() {
   return (
     <div className={styles.container}>

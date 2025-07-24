@@ -1,4 +1,4 @@
-import Analytic from "./component/analytics/index,";
+import Analytic from "./component/analytics";
 import Collaborate from "./component/collaborate";
 import Feature from "./component/features";
 import Feedback from "./component/feedback";

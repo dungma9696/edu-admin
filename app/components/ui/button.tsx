@@ -1,5 +1,3 @@
-"use client";
-
 import type { FC, ReactNode } from "react";
 import { Button as MuiButton } from "@mui/material";
 import type { ButtonProps as MuiButtonProps } from "@mui/material/Button";
