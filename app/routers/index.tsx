@@ -1,47 +1,47 @@
-import { PATH_PUBLIC } from "@/constants/router.const";
-import { FC } from "react";
-import type { RouteObject } from "react-router";
-import { useRoutes } from "react-router-dom";
-import { AsyncDev, AsyncHome } from "./element";
-import AdminLayout from "@/layouts/admin";
-import Dashboard from "@/pages/admin/dashboard";
-import MainLayout from "@/layouts/main";
-import Login from "@/pages/admin/login";
+// import { PATH_PUBLIC } from "@/constants/router.const";
+// import AdminLayout from "@/layouts/admin";
+// import MainLayout from "@/layouts/main";
+// import Dashboard from "@/pages/admin/dashboard";
+// import Login from "@/pages/admin/login";
+// import type { FC } from "react";
+// import type { RouteObject } from "react-router";
+// import { useRoutes } from "react-router-dom";
+// import { AsyncDev, AsyncHome } from "./element";
 
-const routeList: RouteObject[] = [
-  {
-    element: <MainLayout />,
-    children: [
-      {
-        path: PATH_PUBLIC.HOME,
-        element: <AsyncHome />,
-      },
-    ],
-  },
-  {
-    path: PATH_PUBLIC.ADMIN,
-    element: <AdminLayout />,
-    children: [
-      {
-        path: "dashboard",
-        element: <Dashboard />,
-      },
-    ],
-  },
-  {
-    path: `${PATH_PUBLIC.ADMIN}/login`,
-    element: <Login />,
-  },
-  {
-    path: PATH_PUBLIC.DEV,
-    element: <AsyncDev />,
-  },
-];
+// const routeList: RouteObject[] = [
+//   {
+//     element: <MainLayout />,
+//     children: [
+//       {
+//         path: PATH_PUBLIC.HOME,
+//         element: <AsyncHome />,
+//       },
+//     ],
+//   },
+//   {
+//     path: PATH_PUBLIC.ADMIN,
+//     element: <AdminLayout />,
+//     children: [
+//       {
+//         path: "dashboard",
+//         element: <Dashboard />,
+//       },
+//     ],
+//   },
+//   {
+//     path: `${PATH_PUBLIC.ADMIN}/login`,
+//     element: <Login />,
+//   },
+//   {
+//     path: PATH_PUBLIC.DEV,
+//     element: <AsyncDev />,
+//   },
+// ];
 
-const RenderRouter: FC = () => {
-  const element = useRoutes(routeList);
+// const RenderRouter: FC = () => {
+//   const element = useRoutes(routeList);
 
-  return element;
-};
+//   return element;
+// };
 
-export default RenderRouter;
+// export default RenderRouter;

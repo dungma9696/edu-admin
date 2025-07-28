@@ -1,3 +1,4 @@
+
 import {
   Close as CloseIcon,
   ExpandLess,
@@ -465,7 +466,7 @@ const Header: React.FC = () => {
         <LanguageIcon className={styles.mobileLanguageIcon} />
         <span>Language</span>
       </div>
-      <div className={styles.mobileLanguageOptions}>
+      <div className={styles.mobileLanguageOptions}>true
         <button
           className={`${styles.mobileLanguageOption} ${language === "EN" ? styles.mobileLanguageOptionActive : ""}`}
           onClick={() => handleLanguageToggle("EN")}
