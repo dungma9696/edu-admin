@@ -14,7 +14,7 @@ const Hero: React.FC = () => {
             <Grid>
               <Box className={styles.content}>
                 <h1 className={`${styles.title} h1-white`} data-aos="fade-up">
-                  Powerful analytics tools for your business
+                  START YOUR CODING CAREER WITH US
                 </h1>
 
                 <p
@@ -22,9 +22,9 @@ const Hero: React.FC = () => {
                   data-aos="fade-up"
                   data-aos-delay="100"
                 >
-                  An awesome & powerful tools for your business, increase
-                  business revenue with enterprise-grade links built to acquire
-                  and engage customers
+                  Join our courses, from beginner to advanced. You will learn
+                  popular programming languages, develop real-world projects,
+                  and get dedicated support from our expert instructors.
                 </p>
 
                 <Box

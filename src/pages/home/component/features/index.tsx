@@ -5,27 +5,30 @@ import Card from "./component/card";
 
 const cards = [
   {
-    icon: "/images/feature/data.png",
-    title: "Analyze your data",
-    subtitle: "Create reports with an easy to use drag-and-drop designer.",
+    icon: "/images/feature/feat1.svg",
+    title: "From basic to advanced",
+    subtitle: "Start with fundamentals and progress to modern technologies.",
     link: "/",
   },
   {
-    icon: "/images/feature/security.png",
-    title: "Collaborate securely",
-    subtitle: "Share/publish your reports with your colleagues.",
+    icon: "/images/feature/feat2.svg",
+    title: "Study and collaborate",
+    subtitle:
+      "Connect, discuss, and learn with instructors and fellow students.",
     link: "/",
   },
   {
-    icon: "/images/feature/analy.png",
-    title: "Embedded analytics",
-    subtitle: "Get a powerful analytics tool in your own brand name.",
+    icon: "/images/feature/feat3.svg",
+    title: "Build real-world projects",
+    subtitle:
+      "Work on real projects to sharpen your skills and create a strong portfolio.",
     link: "/",
   },
   {
-    icon: "/images/feature/easy.png",
-    title: "Easy and Intuitive",
-    subtitle: "Easily converse with your data using everyday language. ",
+    icon: "/images/feature/feat4.svg",
+    title: "Easy to follow and practical",
+    subtitle:
+      "Lessons are designed to be clear, beginner-friendly, and effective",
     link: "/",
   },
 ];
@@ -38,11 +41,11 @@ function Feature() {
           <Badge badgeStyle="soft" className={styles.badgeFeature}>
             FEATURES
           </Badge>
-          <h2 className="h2-black">Our solution for your business</h2>
+          <h2 className="h2-black">Our programming courses for you</h2>
           <p className="paragraph-18-gray">
-            We are self-service data analytics software that lets you create
-            visually appealing data visualizations and insightful dashboards in
-            minutes.
+            We provide high-quality programming courses that help you quickly
+            master coding skills and build real-world projects in just a few
+            weeks.
           </p>
         </div>
 
