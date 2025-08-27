@@ -4,7 +4,7 @@ import styles from "./feedback.module.scss";
 
 function Feedback() {
   return (
-    <Container maxWidth="xl">
+    <Container >
       <div className={styles.container}>
         <h2 className="h2-black">Trusted by the world largest business</h2>
         <div className={styles.logoContainer}>

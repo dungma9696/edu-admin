@@ -1,4 +1,4 @@
-import Analytic from "./component/analytics/index,";
+import Reason from "./component/reason/index,";
 import Collaborate from "./component/collaborate";
 import Feature from "./component/features";
 import Feedback from "./component/feedback";
@@ -11,8 +11,8 @@ export default function Home() {
   return (
     <div>
       <Hero />
+      <Reason />
       <Feature />
-      <Analytic />
       <MoreFeature />
       <Collaborate />
       <Integration />

@@ -37,7 +37,7 @@ const moreLinks = ["Documentation", "License", "Changelog"];
 function Footer() {
   return (
     <div className={style.container}>
-      <Container maxWidth="xl">
+      <Container>
         <Grid container spacing={2}>
           <Grid size={{ sm: 4, xs: 12 }} order={{ xs: 2, sm: 1 }}>
             <div className={style.footerLogo}>

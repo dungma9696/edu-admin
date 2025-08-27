@@ -37,7 +37,7 @@ const cards = [
 function MoreFeature() {
   return (
     <div className={styles.container}>
-      <Container maxWidth="xl">
+      <Container >
         <div className={`flex-center-col ${styles.titleWrap}`}>
           <p className={styles.tag}>FEATURES</p>
           <h2 className="h2-black">Explore about our awesome features</h2>

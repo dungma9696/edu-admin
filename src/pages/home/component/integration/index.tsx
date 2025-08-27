@@ -2,7 +2,7 @@ import { Container } from "@mui/material";
 import styles from "./integration.module.scss";
 function Integration() {
   return (
-    <Container maxWidth="xl">
+    <Container>
       <div className={`flex-center ${styles.container}`}>
         <div className={`${styles.iconWrap} ${styles.icon1}`}>
           <img src="/images/integration/ic1.png" alt="Icon" />

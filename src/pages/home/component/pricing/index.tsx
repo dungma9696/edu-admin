@@ -8,7 +8,7 @@ import { Link } from "react-router";
 function Pricing() {
   return (
     <div className={style.container}>
-      <Container maxWidth="xl">
+      <Container >
         <div className={`flex-center-col ${style.titleWrap}`}>
           <Badge badgeStyle="soft" variant="success">
             OUR PRICING
@@ -29,7 +29,7 @@ function Pricing() {
 
         <div className={`${style.pricing}`}>
           <Grid container justifyContent={{ lg: "center" }} spacing={4}>
-            <Grid size={{ xs: 12, sm: 12, md: 4, lg: 3 }}>
+            <Grid size={{ xs: 12, sm: 12, md: 4, lg: 4 }}>
               <div className={`${style.pricingCard} ${style.standard}`}>
                 <div className={style.cardTop}>
                   <div className={style.price} style={{ color: "#183B56" }}>
@@ -72,7 +72,7 @@ function Pricing() {
                 </Button>
               </div>
             </Grid>
-            <Grid size={{ xs: 12, sm: 12, md: 4, lg: 3 }}>
+            <Grid size={{ xs: 12, sm: 12, md: 4, lg:4 }}>
               <div className={`${style.pricingCard} ${style.essentials}`}>
                 <div className={style.cardTop}>
                   <div className={style.price} style={{ color: "#36B37E" }}>
@@ -123,7 +123,7 @@ function Pricing() {
                 </Button>
               </div>
             </Grid>
-            <Grid size={{ xs: 12, sm: 12, md: 4, lg: 3 }}>
+            <Grid size={{ xs: 12, sm: 12, md: 4, lg: 4 }}>
               <div className={`${style.pricingCard} ${style.premium}`}>
                 <div className={style.cardTop}>
                   <div className={style.price} style={{ color: "#1565D8" }}>

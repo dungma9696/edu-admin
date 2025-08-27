@@ -3,7 +3,7 @@ import { Container, Grid } from "@mui/material";
 import styles from "./collaborate.module.scss";
 function Collaborate() {
   return (
-    <Container maxWidth="xl" className={styles.container}>
+    <Container className={styles.container}>
       <Grid container spacing={{ md: 5, sm: 1 }}>
         <Grid size={6}>
           <div className={styles.collaborateTitle}>

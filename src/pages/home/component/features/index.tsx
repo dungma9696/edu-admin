@@ -1,7 +1,6 @@
 import { Container, Grid } from "@mui/material";
-import styles from "./feature.module.scss";
-import Badge from "@/components/ui/badge";
 import Card from "./component/card";
+import styles from "./feature.module.scss";
 
 const cards = [
   {
@@ -35,12 +34,12 @@ const cards = [
 
 function Feature() {
   return (
-    <Container maxWidth="xl">
+    <Container>
       <div className={styles.container}>
         <div className={`${"flex-center-col"} ${styles.titleWrap}`}>
-          <Badge badgeStyle="soft" className={styles.badgeFeature}>
+          {/* <Badge badgeStyle="soft" className={styles.badgeFeature}>
             FEATURES
-          </Badge>
+          </Badge> */}
           <h2 className="h2-black">Our programming courses for you</h2>
           <p className="paragraph-18-gray">
             We provide high-quality programming courses that help you quickly
