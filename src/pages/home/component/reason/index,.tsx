@@ -4,28 +4,28 @@ import Card from "./card";
 function Reason() {
   const cards = [
     {
-      title: "Develop logical thinking and problem solving skills ",
+      title: "Phát triển tư duy logic và kỹ năng giải quyết vấn đề",
       subTitle:
-        "Programming helps students practice logical thinking and problem solving skills systematically and creatively.",
+        "Lập trình giúp học sinh rèn luyện khả năng tư duy logic và kỹ năng giải quyết vấn đề một cách hệ thống và sáng tạo.",
       img: "/images/reason/reason-1.png",
     },
     {
-      title: "Critical Skills for the Digital Age",
+      title: "Kỹ năng quan trọng cho thời đại số",
       subTitle:
-        "Programming is one of the core skills of the 21st century, helping students get acquainted with technology, automation and artificial intelligence from an early age.",
+        "Lập trình là một trong những kỹ năng cốt lõi của thế kỷ 21, giúp học sinh làm quen với công nghệ, tự động hóa và trí tuệ nhân tạo ngay từ khi còn nhỏ.",
       img: "/images/reason/reason-1.png",
     },
     {
-      title: "A solid foundation for many professions",
+      title: "Nền tảng vững chắc cho nhiều nghề nghiệp",
       subTitle:
-        "Whether becoming an engineer, scientist, doctor or businessman, programming knowledge will always be an advantage for students to develop their future careers.",
+        "Cho dù trở thành kỹ sư, nhà khoa học, bác sĩ hay doanh nhân, kiến ​​thức lập trình sẽ luôn là lợi thế để sinh viên phát triển sự nghiệp tương lai.",
       img: "/images/reason/reason-1.png",
     },
   ];
   return (
     <div className={styles.container}>
       <Container>
-        <h2 className="h2-black">Why should your learn programming?</h2>
+        <h2 className="h2-black">Tại sao bạn nên học lập trình?</h2>
         <Grid container spacing={6}>
           {cards.map((card, index) => {
             return (

@@ -1,11 +1,10 @@
-import Reason from "./component/reason/index,";
 import Collaborate from "./component/collaborate";
 import Feature from "./component/features";
 import Feedback from "./component/feedback";
 import Hero from "./component/hero";
 import Integration from "./component/integration";
 import MoreFeature from "./component/more-feature";
-import Pricing from "./component/pricing";
+import Reason from "./component/reason/index,";
 
 export default function Home() {
   return (
@@ -17,7 +16,7 @@ export default function Home() {
       <Collaborate />
       <Integration />
       <Feedback />
-      <Pricing />
+      {/* <Pricing /> */}
     </div>
   );
 }

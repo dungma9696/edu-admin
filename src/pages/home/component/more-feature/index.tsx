@@ -5,33 +5,33 @@ import Card from "./component/card";
 const cards = [
   {
     icon: "/images/feature/feat1.png",
-    title: "Easy customization",
-    sub: "No matter what kind of home you have to share, you can increase your earnings.",
+    title: "Dễ dàng tùy chỉnh ",
+    sub: "Mỗi học viên có thể chọn lộ trình học phù hợp với mục tiêu và trình độ.",
   },
   {
     icon: "/images/feature/feat2.png",
-    title: "Secure and fast",
-    sub: "No matter what kind of home you have to share, you can increase your earnings.",
+    title: "Nhanh và bảo mật",
+    sub: "Code và chạy thử ngay trên trình duyệt mà không cần cài đặt phức tạp.",
   },
   {
     icon: "/images/feature/feat3.png",
-    title: "Powerful dashboard",
-    sub: "No matter what kind of home you have to share, you can increase your earnings.",
+    title: "Bảng điều khiển mạnh mẽ",
+    sub: "Theo dõi số bài đã học, thời gian học và mức độ hoàn thành khóa học.",
   },
   {
     icon: "/images/feature/feat4.png",
-    title: "Cloud upload",
-    sub: "No matter what kind of home you have to share, you can increase your earnings.",
+    title: "Tải lên đám mây",
+    sub: "Lưu trữ bài tập, dự án và tài liệu trên cloud để học mọi lúc, mọi nơi",
   },
   {
     icon: "/images/feature/feat5.png",
-    title: "Proven Technology",
-    sub: "No matter what kind of home you have to share, you can increase your earnings.",
+    title: "Công nghệ tiên tiến",
+    sub: "Cập nhật liên tục kiến thức về React, Node.js, AI, và nhiều công nghệ hiện đại.",
   },
   {
     icon: "/images/feature/feat6.png",
-    title: "98.99% satisfaction",
-    sub: "No matter what kind of home you have to share, you can increase your earnings.",
+    title: "Sự hài lòng cao",
+    sub: "Phản hồi tích cực từ hàng ngàn học viên đã hoàn thành khóa học.",
   },
 ];
 function MoreFeature() {
@@ -39,11 +39,10 @@ function MoreFeature() {
     <div className={styles.container}>
       <Container >
         <div className={`flex-center-col ${styles.titleWrap}`}>
-          <p className={styles.tag}>FEATURES</p>
-          <h2 className="h2-black">Explore about our awesome features</h2>
+          <p className={styles.tag}>TÍNH NĂNG</p>
+          <h2 className="h2-black">Khám phá những tính năng nổi bật của khóa học</h2>
           <p className={`paragraph-18-gray ${styles.description}`}>
-            An awesome & powefull JavaScript library for building user
-            interfaces. Independent of any third-party libraries or frameworks.
+           Website học lập trình của chúng tôi mang đến trải nghiệm học tập trực quan, dễ hiểu và thực hành hiệu quả.
           </p>
         </div>
         <div className={styles.cardWrap}>

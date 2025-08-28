@@ -564,18 +564,23 @@ const Header: React.FC = () => {
             {/* Logo */}
             <div className={styles.logo}>
               <Link to="/">
-                <img
+                {/* <img
                   src="/images/header/logo-white.svg"
                   alt="Logo"
                   width={120}
                   height={36}
-                />
+                /> */}
+                <span style={{
+                  color: "white",
+                  fontSize: "40px",
+                  fontWeight: "700"
+                }}>Slearn</span>
               </Link>
             </div>
 
             {!isMobile && (
               <nav className={styles.desktopNav}>
-                {navItems.map((item, index) => (
+                {/* {navItems.map((item, index) => (
                   <div key={index} className={styles.navItemWrapper}>
                     {item.dropdown ? (
                       <div
@@ -598,9 +603,9 @@ const Header: React.FC = () => {
                   </div>
                 ))}
                 {renderSubMenu()}
-                {renderLanguageToggle()}
+                {renderLanguageToggle()} */}
                 <button className={styles.ctaButton} onClick={handleOpen}>
-                  Get it now
+                  Bắt đầu ngay
                 </button>
               </nav>
             )}

@@ -5,29 +5,29 @@ import styles from "./feature.module.scss";
 const cards = [
   {
     icon: "/images/feature/feat1.svg",
-    title: "From basic to advanced",
-    subtitle: "Start with fundamentals and progress to modern technologies.",
+    title: "Từ cơ bản đến nâng cao",
+    subtitle: "Bắt đầu với những kiến ​​thức cơ bản và tiến tới công nghệ hiện đại.",
     link: "/",
   },
   {
     icon: "/images/feature/feat2.svg",
-    title: "Study and collaborate",
+    title: "Học tập và cộng tác",
     subtitle:
-      "Connect, discuss, and learn with instructors and fellow students.",
+      "Kết nối, thảo luận và học hỏi với giảng viên và các bạn sinh viên khác.",
     link: "/",
   },
   {
     icon: "/images/feature/feat3.svg",
-    title: "Build real-world projects",
+    title: "Xây dựng các dự án thực tế",
     subtitle:
-      "Work on real projects to sharpen your skills and create a strong portfolio.",
+      "Làm việc trên các dự án thực tế để nâng cao kỹ năng và tạo ra một danh mục đầu tư mạnh mẽ.",
     link: "/",
   },
   {
     icon: "/images/feature/feat4.svg",
-    title: "Easy to follow and practical",
+    title: "Dễ dàng để làm theo và thực tế",
     subtitle:
-      "Lessons are designed to be clear, beginner-friendly, and effective",
+      "Các bài học được thiết kế rõ ràng, thân thiện với người mới bắt đầu và hiệu quả",
     link: "/",
   },
 ];
@@ -40,11 +40,13 @@ function Feature() {
           {/* <Badge badgeStyle="soft" className={styles.badgeFeature}>
             FEATURES
           </Badge> */}
-          <h2 className="h2-black">Our programming courses for you</h2>
+          <h2 className="h2-black">
+            Các khóa học lập trình của chúng tôi dành cho bạn
+          </h2>
           <p className="paragraph-18-gray">
-            We provide high-quality programming courses that help you quickly
-            master coding skills and build real-world projects in just a few
-            weeks.
+            Chúng tôi cung cấp các khóa học lập trình chất lượng cao giúp bạn
+            nhanh chóng nắm vững kỹ năng lập trình và xây dựng các dự án thực tế
+            chỉ trong vài tuần.
           </p>
         </div>
 
