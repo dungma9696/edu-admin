@@ -1,0 +1,65 @@
+@use "../../../styles/variables.scss";
+
+.form {
+  .btnAdvise {
+    margin-top: 30px;
+    width: 100%;
+    font-weight: 700;
+  }
+}
+
+.courseInfo {
+  .courseImg {
+    img {
+      width: 255px;
+      height: 240px;
+      border-radius: 15px;
+      margin: 0 10px;
+    }
+  }
+
+  h2 {
+    text-transform: uppercase;
+    color: variables.$primary-color;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  p {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: (variables.$breakpoint-md + 1)) and (max-width: (variables.$breakpoint-lg - 0.02)) {
+  .courseInfo {
+    .courseImg {
+      img {
+        width: 180px;
+        height: 180px;
+      }
+    }
+
+    h2 {
+      text-align: left;
+    }
+
+    p {
+      text-align: left;
+    }
+  }
+}
+
+@media (max-width: (variables.$breakpoint-md)) {
+  .courseInfo {
+    .courseImg {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: (variables.$breakpoint-sm)) {
+}

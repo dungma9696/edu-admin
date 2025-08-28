@@ -1,48 +1,52 @@
 import { Container, Grid } from "@mui/material";
-import styles from "./feature.module.scss";
-import Badge from "@/components/ui/badge";
 import Card from "./component/card";
+import styles from "./feature.module.scss";
 
 const cards = [
   {
-    icon: "/images/feature/data.png",
-    title: "Analyze your data",
-    subtitle: "Create reports with an easy to use drag-and-drop designer.",
+    icon: "/images/feature/feat1.svg",
+    title: "Từ cơ bản đến nâng cao",
+    subtitle: "Bắt đầu với những kiến ​​thức cơ bản và tiến tới công nghệ hiện đại.",
     link: "/",
   },
   {
-    icon: "/images/feature/security.png",
-    title: "Collaborate securely",
-    subtitle: "Share/publish your reports with your colleagues.",
+    icon: "/images/feature/feat2.svg",
+    title: "Học tập và cộng tác",
+    subtitle:
+      "Kết nối, thảo luận và học hỏi với giảng viên và các bạn sinh viên khác.",
     link: "/",
   },
   {
-    icon: "/images/feature/analy.png",
-    title: "Embedded analytics",
-    subtitle: "Get a powerful analytics tool in your own brand name.",
+    icon: "/images/feature/feat3.svg",
+    title: "Xây dựng các dự án thực tế",
+    subtitle:
+      "Làm việc trên các dự án thực tế để nâng cao kỹ năng và tạo ra một danh mục đầu tư mạnh mẽ.",
     link: "/",
   },
   {
-    icon: "/images/feature/easy.png",
-    title: "Easy and Intuitive",
-    subtitle: "Easily converse with your data using everyday language. ",
+    icon: "/images/feature/feat4.svg",
+    title: "Dễ dàng để làm theo và thực tế",
+    subtitle:
+      "Các bài học được thiết kế rõ ràng, thân thiện với người mới bắt đầu và hiệu quả",
     link: "/",
   },
 ];
 
 function Feature() {
   return (
-    <Container maxWidth="xl">
+    <Container>
       <div className={styles.container}>
         <div className={`${"flex-center-col"} ${styles.titleWrap}`}>
-          <Badge badgeStyle="soft" className={styles.badgeFeature}>
+          {/* <Badge badgeStyle="soft" className={styles.badgeFeature}>
             FEATURES
-          </Badge>
-          <h2 className="h2-black">Our solution for your business</h2>
+          </Badge> */}
+          <h2 className="h2-black">
+            Các khóa học lập trình của chúng tôi dành cho bạn
+          </h2>
           <p className="paragraph-18-gray">
-            We are self-service data analytics software that lets you create
-            visually appealing data visualizations and insightful dashboards in
-            minutes.
+            Chúng tôi cung cấp các khóa học lập trình chất lượng cao giúp bạn
+            nhanh chóng nắm vững kỹ năng lập trình và xây dựng các dự án thực tế
+            chỉ trong vài tuần.
           </p>
         </div>
 

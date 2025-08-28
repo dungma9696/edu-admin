@@ -4,39 +4,39 @@ import styles from "./feedback.module.scss";
 
 function Feedback() {
   return (
-    <Container maxWidth="xl">
+    <Container >
       <div className={styles.container}>
-        <h2 className="h2-black">Trusted by the world largest business</h2>
+        <h2 className="h2-black">Được tin tưởng bởi hàng ngàn học viên và đối tác</h2>
         <div className={styles.logoContainer}>
           <Grid container spacing={2}>
             <Grid size={{ xs: 6, sm: 4, md: 2 }}>
               <div className={styles.logoItem}>
-                <img src="./images/feedback/slack.png" alt="slack" />
+                <img src="./images/feedback/pngimg.com - github_PNG65.png" alt="slack" />
               </div>
             </Grid>
             <Grid size={{ xs: 6, sm: 4, md: 2 }}>
               <div className={styles.logoItem}>
-                <img src="./images/feedback/netflix.png" alt="netflix" />
+                <img src="./images/feedback/FreeCodeCamp_logo.png" alt="netflix" />
               </div>
             </Grid>
             <Grid size={{ xs: 6, sm: 4, md: 2 }}>
               <div className={styles.logoItem}>
-                <img src="./images/feedback/fitbit.png" alt="fitbit" />
+                <img src="./images/feedback/images.png" alt="fitbit" />
               </div>
             </Grid>
             <Grid size={{ xs: 6, sm: 4, md: 2 }}>
               <div className={styles.logoItem}>
-                <img src="./images/feedback/google.png" alt="google" />
+                <img src="./images/feedback/Stack_Overflow_logo.svg.png" alt="google" />
               </div>
             </Grid>
             <Grid size={{ xs: 6, sm: 4, md: 2 }}>
               <div className={styles.logoItem}>
-                <img src="./images/feedback/airbnb.png" alt="airbnb" />
+                <img src="./images/feedback/Coursera_logo_(2020).svg.png" alt="airbnb" />
               </div>
             </Grid>
             <Grid size={{ xs: 6, sm: 4, md: 2 }}>
               <div className={styles.logoItem}>
-                <img src="./images/feedback/uber.png" alt="uber" />
+                <img src="./images/feedback/For_PRs_logo.jpg" alt="uber" />
               </div>
             </Grid>
           </Grid>
@@ -52,16 +52,14 @@ function Feedback() {
               <div
                 className={`${styles.feedbackItem} ${styles.feedbackItemFirst}`}
               >
-                <img
+                {/* <img
                   src="./images/feedback/airbnb-color.png"
                   alt="Airbnb"
                   width={102}
                   height={32}
-                />
+                /> */}
                 <p className="paragraph-18-black">
-                  I received great customer service from the specialists who
-                  helped me. I would recommend to anyone who wants great
-                  dashboard that has great quality.
+                  Các khóa học ở đây rất thực tế, có nhiều project giúp mình nâng cao kỹ năng nhanh chóng. Mentor hỗ trợ tận tình.
                 </p>
 
                 <Box className={styles.customerInfo}>
@@ -73,7 +71,7 @@ function Feedback() {
                   />
                   <Box className={styles.customerDetails}>
                     <p className={`paragraph-16-black ${styles.customerName}`}>
-                      Bryan Arnoldy
+                      Nguyễn Văn Hùng – Học viên đã hoàn thành khóa ReactJS
                     </p>
 
                     <Chip
@@ -100,16 +98,14 @@ function Feedback() {
 
             <Grid size={{ xs: 12, sm: 6, md: 6, lg: 4 }}>
               <div className={styles.feedbackItem}>
-                <img
+                {/* <img
                   src="./images/feedback/amazon.png"
                   alt="Airbnb"
                   width={102}
                   height={32}
-                />
+                /> */}
                 <p className="paragraph-18-black">
-                  My experience with this platform so far has been great.
-                  Everything is easy, from creating visualization, scheduling,
-                  collaboration and many more.
+                  Mình thích nhất là phần cộng đồng: có thể thảo luận với bạn bè, chia sẻ code và cùng nhau giải bài tập. Rất hữu ích!
                 </p>
 
                 <Box className={styles.customerInfo}>
@@ -121,7 +117,7 @@ function Feedback() {
                   />
                   <Box className={styles.customerDetails}>
                     <p className={`paragraph-16-black ${styles.customerName}`}>
-                      Joshua William{" "}
+                     Trần Thị Mai – Học viên Fullstack Web
                     </p>
 
                     <Chip

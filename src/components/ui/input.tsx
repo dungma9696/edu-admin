@@ -85,7 +85,7 @@ const Input: FC<InputProps> = ({
   className = "",
   // onValueChange,
   direction,
-  // onChange,
+  onChange,
   onFocus,
   onBlur,
   margin,
@@ -124,8 +124,10 @@ const Input: FC<InputProps> = ({
   };
 
   const handleSelectChange = (event: any) => {
-    const newValue = parseBoolean(event.target.value);
-    // onValueChange?.(newValue);
+    const newValue = event.target.value;
+
+    onChange?.(event);
+
     if (validate) {
       const isValid = validate(newValue);
       setInternalError(!isValid);

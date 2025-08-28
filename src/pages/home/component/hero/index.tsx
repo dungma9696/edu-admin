@@ -14,7 +14,7 @@ const Hero: React.FC = () => {
             <Grid>
               <Box className={styles.content}>
                 <h1 className={`${styles.title} h1-white`} data-aos="fade-up">
-                  Powerful analytics tools for your business
+                  BẮT ĐẦU SỰ NGHIỆP LẬP TRÌNH CÙNG CHÚNG TÔI
                 </h1>
 
                 <p
@@ -22,9 +22,10 @@ const Hero: React.FC = () => {
                   data-aos="fade-up"
                   data-aos-delay="100"
                 >
-                  An awesome & powerful tools for your business, increase
-                  business revenue with enterprise-grade links built to acquire
-                  and engage customers
+                  Tham gia khóa học của chúng tôi từ cơ bản đến nâng cao. Bạn sẽ
+                  học các ngôn ngữ lập trình phổ biến, thực hành dự án thực tế
+                  và nhận được sự hỗ trợ tận tình từ đội ngũ giảng viên giàu
+                  kinh nghiệm.
                 </p>
 
                 <Box
@@ -38,7 +39,7 @@ const Hero: React.FC = () => {
                     className={styles.primaryButton}
                     endIcon={<ArrowForward />}
                   >
-                    Get Started
+                    Bắt đầu
                   </Button>
                   <Button
                     variant="outlined"
@@ -46,7 +47,7 @@ const Hero: React.FC = () => {
                     className={styles.secondaryButton}
                     endIcon={<ArrowForward />}
                   >
-                    Watch Demo
+                    Xem Thử Demo
                   </Button>
                 </Box>
               </Box>

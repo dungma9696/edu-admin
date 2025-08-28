@@ -21,7 +21,7 @@ function Card({ item }: { item: IFeauture }) {
         to={item.link}
         className={`flex-center text-18-bold ${styles.featureLink}`}
       >
-        Learn more <ArrowForwardIcon />
+        Xem thêm <ArrowForwardIcon />
       </Link>
     </div>
   );

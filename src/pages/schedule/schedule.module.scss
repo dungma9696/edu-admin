@@ -1,0 +1,134 @@
+@use "../../../src/styles/variables.scss";
+
+.container {
+  width: 100%;
+  overflow: hidden;
+}
+.scheduleBg {
+  background: url("/images/schedule/schedule-bg.jpg") no-repeat center/cover;
+  padding: 50px 0;
+  .tableWrap {
+    width: 800px;
+    min-height: 500px;
+    background-color: white;
+    border-radius: 14px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    .tableTitle {
+      width: 300px;
+      color: white;
+      font-size: 26px;
+      font-weight: 600;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+      font-size: 16px;
+      margin-top: 40px;
+    }
+
+    thead th {
+      padding: 16px;
+      font-weight: bold;
+      background-color: variables.$primary-color;
+      color: #ffffff;
+    }
+
+    thead th:first-child {
+      border-top-left-radius: 8px;
+    }
+
+    thead th:last-child {
+      border-top-right-radius: 8px;
+    }
+
+    tbody tr {
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    tbody tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    tbody td {
+      padding: 14px 16px;
+      color: #333333;
+    }
+  }
+
+  .btnWrap {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    .divider {
+      flex: 1;
+      height: 1px;
+      background-color: #ccc;
+      width: 100%;
+    }
+    .btn {
+      border-radius: 30px !important;
+      font-weight: 600;
+    }
+  }
+}
+
+.advise {
+  margin-top: 50px;
+}
+
+@media (min-width: (variables.$breakpoint-sm + 1)) and (max-width: (variables.$breakpoint-md - 0.02)) {
+  .scheduleBg {
+    .tableWrap {
+      margin: 0;
+
+      width: 100%;
+      table {
+        width: 100%;
+      }
+    }
+  }
+
+  .advise {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: (variables.$breakpoint-sm)) {
+  .scheduleBg {
+    .tableWrap {
+      margin: 0;
+
+      width: 100%;
+      table {
+        width: 100%;
+        font-size: 12px;
+        margin-top: 20px;
+      }
+
+      thead th {
+        padding: 10px;
+        font-weight: bold;
+        background-color: variables.$primary-color;
+        color: #ffffff;
+      }
+
+      .btnWrap {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  .advise {
+    margin-top: 20px;
+  }
+}

@@ -37,22 +37,26 @@ const moreLinks = ["Documentation", "License", "Changelog"];
 function Footer() {
   return (
     <div className={style.container}>
-      <Container maxWidth="xl">
+      <Container>
         <Grid container spacing={2}>
           <Grid size={{ sm: 4, xs: 12 }} order={{ xs: 2, sm: 1 }}>
             <div className={style.footerLogo}>
-              <img
-                src="/images/header/logo-black.png"
-                alt="Logo"
-                width={120}
-                height={36}
-              />
-              <p
+              <span
+                style={{
+                  fontSize: "40px",
+                  fontWeight: "700",
+                }}
+                className="paragraph-14-black"
+              >
+                
+                Slearn
+              </span>
+              {/* <p
                 className={`${style.footerSlogan} ${"paragraph-16-gray-light"}`}
               >
                 Build a modern and creative website with crealand
-              </p>
-              <Box className={style.socialMedia}>
+              </p> */}
+              {/* <Box className={style.socialMedia}>
                 {socialIcons.map((social, index) => (
                   <IconButton
                     key={index}
@@ -63,10 +67,10 @@ function Footer() {
                     {social.icon}
                   </IconButton>
                 ))}
-              </Box>
+              </Box> */}
             </div>
           </Grid>
-          <Grid size={{ sm: 8, xs: 12 }} order={{ xs: 1, sm: 2 }}>
+          {/* <Grid size={{ sm: 8, xs: 12 }} order={{ xs: 1, sm: 2 }}>
             <Grid spacing={{ xs: 7, sm: 2 }} container>
               <Grid size={{ xs: 6, sm: 6, md: 3 }}>
                 <div>
@@ -133,7 +137,7 @@ function Footer() {
                 </div>
               </Grid>
             </Grid>
-          </Grid>
+          </Grid> */}
         </Grid>
         <div className={style.footerCopyRight}>
           <IconButton className={style.favoriteButton} size="large">
